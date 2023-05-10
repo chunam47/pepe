@@ -114,9 +114,14 @@ export default function Header() {
                   </Menu.Item>
                 ))}
                 <div className="py-2 px-3  bg-[#21294D] w-fit">
-                  <button className="py-2 px-3 text-white font-medium font-montserrat ">
-                    Launch Dapp
-                  </button>
+                  <div className="flex gap-8 items-center">
+                    <button className="glow-on-hover py-2 px-3 text-white font-medium bg-transparent border-2 border-[#ECFF76] rounded-xl font-montserrat btn-lauch ">
+                      Buy Now
+                    </button>
+                    <button className="glow-on-hover py-2 px-3 text-white font-medium bg-transparent border-2 border-[#ECFF76] rounded-xl font-montserrat btn-lauch ">
+                      Connect Wallet
+                    </button>
+                  </div>
                 </div>
               </Menu>
             </Drawer>
