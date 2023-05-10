@@ -8,7 +8,7 @@ const GetPepe = () => {
   return (
     <React.Fragment>
       <BlockContent className="relative ">
-        <div className="mt-[282px] mb-[363px]">
+        <div className="mt-[282px] mb-[363px] relative">
           <Image
             alt=""
             src={img}

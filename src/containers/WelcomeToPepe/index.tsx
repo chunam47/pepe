@@ -7,7 +7,7 @@ const WelcomeToPepe = () => {
   return (
     <React.Fragment>
       <BlockContent className="relative">
-        <div className="flex flex-col justify-center items-center">
+        <div className="flex flex-col justify-center items-center relative">
           <Image
             alt=""
             src={img}
