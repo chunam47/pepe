@@ -62,8 +62,7 @@ const Layout: FC<ILayout> = ({
       </Head>
       <Header />
       {isLoding ? <></> : <main>{children}</main>}
-      {/* <Footer /> */}
-      {showFooter && <Footer />}
+      <Footer />
     </>
   );
 };

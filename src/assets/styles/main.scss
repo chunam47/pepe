@@ -17,7 +17,9 @@
 body {
   // font-family: "Quattrocento Sans", sans-serif;
   font-family: "Chango";
-  background: #f8fbfd;
+  background-image: url("../../assets/images/bg.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .glow-on-hover {
   cursor: pointer;
@@ -84,5 +86,31 @@ body {
       text-align: center;
       color: #ffffff;
     }
+  }
+}
+
+.title-app {
+  font-family: "Chango";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 70px;
+  color: #fdd913;
+}
+
+.line-hr {
+  width: 2px;
+  height: 345px;
+  background-image: url("../images/line.svg");
+}
+
+.range-get-pepe {
+  input[type="range"]::-webkit-slider-runnable-track {
+    background: #26423a;
+    height: 6px;
+    border-radius: 50px;
+  }
+  input[type="range"]::-webkit-slider-thumb {
+    display: none;
   }
 }
