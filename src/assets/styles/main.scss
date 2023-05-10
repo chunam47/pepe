@@ -9,20 +9,14 @@
 @import "swiper/css/navigation";
 
 @font-face {
-  font-family: "Aviano Serif";
-  src: local("Aviano Serif"),
-    url("../../assets/fonts/AvianoSerif.otf") format("opentype");
-}
-
-@font-face {
-  font-family: "Montserrat";
-  src: local("Montserrat"),
-    url("../../assets/fonts/Montserrat-Regular.ttf") format("truetype");
+  font-family: "Chango";
+  src: local("Chango"),
+    url("../../assets/fonts/Chango-Regular.ttf") format("opentype");
 }
 
 body {
   // font-family: "Quattrocento Sans", sans-serif;
-  font-family: "Montserrat";
+  font-family: "Chango";
   background: #f8fbfd;
 }
 .glow-on-hover {
@@ -52,13 +46,6 @@ body {
   box-shadow: 4px 4px 0px #070707;
 }
 
-.font-montserrat {
-  font-family: "Montserrat" !important;
-}
-.font-aviano-serif {
-  font-family: "Aviano Serif" !important;
-}
-
 .ant-menu-item-selected {
   background: unset !important;
   color: #8b9bff !important;
@@ -70,6 +57,10 @@ body {
 }
 .ant-menu-vertical {
   border-inline-end: unset !important;
+}
+
+.ant-menu-item:hover:not(.ant-menu-item-selected) {
+  color: #fdd913 !important;
 }
 .header-app {
   background: radial-gradient(
@@ -83,8 +74,7 @@ body {
     border-inline-end: unset !important;
     gap: 12px;
     &__item {
-      font-family: "Montserrat";
-      font-style: normal;
+      font-family: "Chango";
       font-style: normal;
       font-weight: 400;
       font-size: 16px;

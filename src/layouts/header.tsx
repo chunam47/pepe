@@ -2,6 +2,9 @@ import { MenuUnfoldOutlined } from "@ant-design/icons";
 import { Drawer, Menu } from "antd";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
+import logo from "@assets/images/logo.svg";
+import iconSkype from "@assets/images/icon-skype.svg";
+import iconTele from "@assets/images/icon-tele.svg";
 import BlockContent from "../components/BlockContent";
 
 export default function Header() {
@@ -57,7 +60,7 @@ export default function Header() {
         <BlockContent>
           <div className="flex justify-between items-center py-[15px]">
             <div className="flex gap-8">
-              <Image alt="logo" src="" />
+              <Image alt="logo" src={logo} />
               <Menu className="menu flex justify-between bg-transparent">
                 {dataMenu.map((item, key) => (
                   <Menu.Item className="glow-on-hover menu__item" key={key}>
@@ -71,12 +74,24 @@ export default function Header() {
                 ))}
               </Menu>
             </div>
-            <button className="glow-on-hover py-2 px-3 text-white font-medium bg-transparent border-2 border-[#ECFF76] rounded-xl font-montserrat btn-lauch ">
-              Buy Now
-            </button>
-            <button className="glow-on-hover py-2 px-3 text-white font-medium bg-transparent border-2 border-[#ECFF76] rounded-xl font-montserrat btn-lauch ">
-              Connect Wallet
-            </button>
+            <div className="flex gap-20 items-center">
+              <div className="flex gap-4 items-center">
+                <div>
+                  <Image alt="" src={iconSkype} />
+                </div>
+                <div>
+                  <Image alt="" src={iconTele} />
+                </div>
+              </div>
+              <div className="flex gap-8 items-center">
+                <button className="glow-on-hover py-2 px-3 text-white font-medium bg-transparent border-2 border-[#ECFF76] rounded-xl font-montserrat btn-lauch ">
+                  Buy Now
+                </button>
+                <button className="glow-on-hover py-2 px-3 text-white font-medium bg-transparent border-2 border-[#ECFF76] rounded-xl font-montserrat btn-lauch ">
+                  Connect Wallet
+                </button>
+              </div>
+            </div>
             <div className="menuButton hidden" onClick={showDrawer}>
               <MenuUnfoldOutlined />
             </div>
