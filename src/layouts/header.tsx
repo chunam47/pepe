@@ -8,6 +8,12 @@ import iconTele from "@assets/images/icon-tele.svg";
 import BlockContent from "../components/BlockContent";
 
 export default function Header() {
+  const [alert, setAlert] = useState(false);
+  useEffect(() => {
+    setTimeout(() => {
+      setAlert(false);
+    }, 3000);
+  }, [alert]);
   const dataMenu = [
     {
       title: "Aridrop",
@@ -22,8 +28,15 @@ export default function Header() {
       onclick: "#pepetomomics",
     },
     {
+      title: "Whitepaper",
+      onclick: "#whitepaper",
+    },
+    {
       title: "Earn",
       onclick: "#earn",
+      className: "coming-soon",
+      onClick: () => setAlert(true),
+      contentAlert: "Coming Soon !!!",
     },
   ];
   const [active, setActive] = useState("");
@@ -60,13 +73,31 @@ export default function Header() {
         <BlockContent>
           <div className="flex justify-between items-center py-[15px]">
             <div className="flex gap-8">
-              <Image alt="logo" src={logo} />
+              <Image
+                alt="logo"
+                src={logo}
+                onClick={() => {
+                  window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+                }}
+              />
               <Menu className="menu flex justify-between bg-transparent">
                 {dataMenu.map((item, key) => (
-                  <Menu.Item className="glow-on-hover menu__item" key={key}>
+                  <Menu.Item
+                    className="glow-on-hover menu__item relative"
+                    key={key}
+                  >
+                    {alert && item?.contentAlert && (
+                      <span className="absolute top-[50%] left-0 right-0 translate-y-[-50%] rounded-full bg-[#f2dede] text-[6px] text-[#a94442] px-[4px]">
+                        {item?.contentAlert}
+                      </span>
+                    )}
+
                     <a
+                      onClick={item?.onClick}
                       href={item.onclick}
-                      className={`${active === item.onclick && "active-menu"}`}
+                      className={`${active === item.onclick && "active-menu"} ${
+                        item?.className
+                      }`}
                     >
                       {item.title}
                     </a>
@@ -76,10 +107,10 @@ export default function Header() {
             </div>
             <div className="flex gap-20 items-center">
               <div className="flex gap-4 items-center">
-                <div>
+                <div className="glow-on-hover">
                   <Image alt="" src={iconSkype} />
                 </div>
-                <div>
+                <div className="glow-on-hover">
                   <Image alt="" src={iconTele} />
                 </div>
               </div>

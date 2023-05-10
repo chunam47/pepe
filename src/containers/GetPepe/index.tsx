@@ -8,7 +8,7 @@ const GetPepe = () => {
   return (
     <React.Fragment>
       <BlockContent className="relative ">
-        <div className="mt-[282px] mb-[363px] relative">
+        <div className="mt-[282px] mb-[363px] relative" id="aridrop">
           <Image
             alt=""
             src={img}
@@ -45,12 +45,12 @@ const GetPepe = () => {
               </div>
             </div>
             <div className="flex gap-8 justify-evenly w-[90%] mt-14">
-              <button className="bg-[#73A095] rounded-xl py-[10px] px-4 text-white text-[16px] leading-5">
+              <button className="bg-[#73A095] rounded-xl py-[10px] px-4 text-white text-[16px] leading-5 glow-on-hover">
                 <span className="flex justify-center items-center text-center">
                   You didn't connect the wallet
                 </span>
               </button>
-              <button className="bg-[#59A895] rounded-xl py-[10px] px-4 text-white text-[16px] leading-5 border-[3px] border-[#ACF10E]">
+              <button className="bg-[#59A895] rounded-xl py-[10px] px-4 text-white text-[16px] leading-5 border-[3px] border-[#ACF10E] glow-on-hover">
                 <span className="flex justify-center items-center text-center">
                   You didn't connect the wallet
                 </span>

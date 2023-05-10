@@ -24,11 +24,6 @@ export default function Footer() {
 
   const dataBottomIcon = [
     {
-      title: "icon A",
-      onclick: "#icona",
-      src: iconA,
-    },
-    {
       title: "Telegram",
       onclick: "#telegram",
       src: iconTele,
@@ -44,7 +39,13 @@ export default function Footer() {
       <BlockContent>
         <div className="content-footer w-full flex flex-row items-center justify-between py-8 ">
           <div className="flex flex-row gap-10">
-            <Image alt="logo" src={logo} />
+            <Image
+              alt="logo"
+              src={logo}
+              onClick={() => {
+                window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+              }}
+            />
             <div className="text-[14px] text-[#EFFFCA] w-[350px]">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore
@@ -55,7 +56,7 @@ export default function Footer() {
             <div className="flex items-center justify-center gap-6">
               {data.map((item) => (
                 <a
-                  className=" cursor-pointer text-[#ECFF76] duration-300 hover:scale-105"
+                  className=" cursor-pointer text-[#ECFF76] duration-300 glow-on-hover"
                   href={item.onclick}
                 >
                   {item.title}
@@ -64,12 +65,8 @@ export default function Footer() {
             </div>
             <div className="flex items-center justify-end gap-4">
               {dataBottomIcon.map((item) => (
-                <a href={item.onclick}>
-                  <Image
-                    alt={item.title}
-                    src={item.src}
-                    className="scale-90 cursor-pointer"
-                  />
+                <a href={item.onclick} className="glow-on-hover">
+                  <Image alt={item.title} src={item.src} />
                 </a>
               ))}
             </div>

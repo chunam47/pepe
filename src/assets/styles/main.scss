@@ -20,6 +20,7 @@ body {
   background-image: url("../../assets/images/bg.svg");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: top;
 }
 .glow-on-hover {
   cursor: pointer;
@@ -50,9 +51,13 @@ body {
 
 .ant-menu-item-selected {
   background: unset !important;
-  color: #8b9bff !important;
+  color: #fdd913 !important;
   font-weight: 600 !important;
 }
+.coming-soon {
+  color: #6e6d6d !important;
+}
+
 .ant-menu-item:hover,
 .no-hover:hover {
   background: unset !important;
@@ -64,6 +69,7 @@ body {
 .ant-menu-item:hover:not(.ant-menu-item-selected) {
   color: #fdd913 !important;
 }
+
 .header-app {
   background: radial-gradient(
     50% 50% at 50% 50%,
@@ -85,6 +91,7 @@ body {
       align-items: center;
       text-align: center;
       color: #ffffff;
+      width: auto;
     }
   }
 }

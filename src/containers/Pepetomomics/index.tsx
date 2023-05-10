@@ -8,8 +8,11 @@ import Image from "next/image";
 const Pepetomomics = () => {
   return (
     <React.Fragment>
-      <BlockContent className="relative ">
-        <div className="flex flex-col justify-center items-center mt-[276px] mb-[214px] relative">
+      <BlockContent className="relative">
+        <div
+          className="flex flex-col justify-center items-center mt-[276px] mb-[214px] relative"
+          id="pepetomomics"
+        >
           <Image
             alt=""
             src={img}
