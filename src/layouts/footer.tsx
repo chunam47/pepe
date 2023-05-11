@@ -47,8 +47,7 @@ export default function Footer() {
               }}
             />
             <div className="text-[14px] text-[#EFFFCA] w-[350px]">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore
+              A journey of a thousand miles begins with a single step
             </div>
           </div>
 

@@ -4,7 +4,7 @@
   "editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace",
   "editor.fontLigatures": true,
   "javascript.updateImportsOnFileMove.enabled": "always",
-  "workbench.iconTheme": "vscode-icons",
+  "workbench.iconTheme": "material-icon-theme",
   "workbench.colorTheme": "Dracula",
   "editor.tabSize": 2,
   "files.associations": {
