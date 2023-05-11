@@ -39,7 +39,7 @@ export default function Header() {
       contentAlert: "Coming Soon !!!",
     },
   ];
-  const [active, setActive] = useState("");
+  const [active, setActive] = useState<any>("");
   const [scrollTop, setScrollTop] = useState(0);
 
   useEffect(() => {
@@ -63,9 +63,13 @@ export default function Header() {
   const showDrawer = () => {
     setVisible(!visible);
   };
-  // const handleClickMenu = (val: any) => {
-  //   sessionStorage.setItem("menu-active", val.onclick);
-  // };
+  const handleClickMenu = (val: any) => {
+    sessionStorage.setItem("menu-active", val.onclick);
+  };
+
+  useEffect(() => {
+    setActive(sessionStorage.getItem("menu-active"));
+  }, [handleClickMenu]);
 
   return (
     <React.Fragment>
@@ -78,7 +82,9 @@ export default function Header() {
                 src={logo}
                 onClick={() => {
                   window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+                  sessionStorage.setItem("menu-active", "");
                 }}
+                className="cursor-pointer"
               />
               <Menu className="menu flex justify-between bg-transparent">
                 {dataMenu.map((item, key) => (
@@ -93,7 +99,11 @@ export default function Header() {
                     )}
 
                     <a
-                      onClick={item?.onClick}
+                      onClick={
+                        item.onClick
+                          ? item?.onClick
+                          : () => handleClickMenu(item)
+                      }
                       href={item.onclick}
                       className={`${active === item.onclick && "active-menu"} ${
                         item?.className
@@ -106,8 +116,8 @@ export default function Header() {
               </Menu>
             </div>
             <div className="flex gap-20 items-center">
-              <div className="flex gap-4 items-center">
-                <div className="glow-on-hover">
+              <div className="flex gap-4 items-center link-app-header">
+                <div className="glow-on-hover cursor-pointer">
                   <Image alt="" src={iconSkype} />
                 </div>
                 <div className="glow-on-hover">
@@ -137,6 +147,14 @@ export default function Header() {
                 {dataMenu.map((item, key) => (
                   <Menu.Item key={key} className="capitalize">
                     <a
+                      onClick={
+                        item.onClick
+                          ? item?.onClick
+                          : () => {
+                              handleClickMenu(item);
+                              setVisible(false);
+                            }
+                      }
                       className={`${active === item.onclick && "active-menu"}`}
                       href={`${item.onclick}`}
                     >
@@ -144,12 +162,20 @@ export default function Header() {
                     </a>
                   </Menu.Item>
                 ))}
-                <div className="py-2 px-3  bg-[#21294D] w-fit">
-                  <div className="flex gap-8 items-center">
-                    <button className="glow-on-hover py-2 px-3 text-white font-medium bg-transparent border-2 border-[#ECFF76] rounded-xl font-montserrat btn-lauch ">
+                <div className="py-2 px-3 w-fit">
+                  <div className="flex gap-4 items-center link-app-header mb-5">
+                    <div className="glow-on-hover cursor-pointer">
+                      <Image alt="" src={iconSkype} />
+                    </div>
+                    <div className="glow-on-hover">
+                      <Image alt="" src={iconTele} />
+                    </div>
+                  </div>
+                  <div className="flex flex-col gap-8">
+                    <button className="text-white p-4 font-[400] bg-transparent border-2 border-[#ECFF76] rounded-xl btn-lauch ">
                       Buy Now
                     </button>
-                    <button className="glow-on-hover py-2 px-3 text-white font-medium bg-transparent border-2 border-[#ECFF76] rounded-xl font-montserrat btn-lauch ">
+                    <button className="text-white p-4 font-[400] bg-transparent border-2 border-[#ECFF76] rounded-xl btn-lauch ">
                       Connect Wallet
                     </button>
                   </div>

@@ -17,7 +17,7 @@ export default function Footer() {
       onclick: "#about-us",
     },
     {
-      title: "Rektomomics",
+      title: "$PPSunomics",
       onclick: "#rektomomics",
     },
   ];
@@ -38,7 +38,7 @@ export default function Footer() {
     <div className="footer bg-[#0e2d25] ">
       <BlockContent>
         <div className="content-footer w-full flex flex-row items-center justify-between py-8 ">
-          <div className="flex flex-row gap-10">
+          <div className="flex flex-row gap-10 footer-left">
             <Image
               alt="logo"
               src={logo}
@@ -51,8 +51,8 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="flex flex-col justify-center gap-4">
-            <div className="flex items-center justify-center gap-6">
+          <div className="flex flex-col justify-center gap-4 wrap-footer-right">
+            <div className="flex items-center justify-center gap-6 footer-right">
               {data.map((item) => (
                 <a
                   className=" cursor-pointer text-[#ECFF76] duration-300 glow-on-hover"
