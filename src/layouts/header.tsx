@@ -16,7 +16,7 @@ export default function Header() {
   }, [alert]);
   const dataMenu = [
     {
-      title: "Aridrop",
+      title: "Airdrop",
       onclick: "#aridrop",
     },
     {

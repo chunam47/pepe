@@ -9,7 +9,7 @@ import BlockContent from "../components/BlockContent";
 export default function Footer() {
   const data = [
     {
-      title: "Aridrop",
+      title: "Airdrop",
       onclick: "#aridrop",
     },
     {

@@ -17,25 +17,36 @@ const WelcomeToPepe = () => {
             className="absolute top-[-84px] right-0 z-[-1]"
           />
           <div className="flex flex-col justify-center items-center">
-            <h2 className="title-app mb-10">Welcome to Pepe</h2>
+            <h2 className="title-app mb-10">Welcome to $PPSUN</h2>
             <span className="text-[24px] leading-7 font-[400] text-white text-center w-[80%]">
-              The token that's all about getting rekted!
+              First Ever MeMe about Justin Sun
             </span>
           </div>
           <div className="flex gap-14 mt-14 items-center">
             <div>
               <div className="min-h-[198px] h-full flex items-center text-[12px] leading-4 p-6 border-[3px] rounded-[20px] text-white border-[#ECFF76] w-[278px]">
                 <div>
-                  <span className="text-[#ACF10E]">At REKT</span>{" "}
+                  <span className="text-[#ACF10E]">$PPSUN</span>{" "}
                   <span>
-                    we believe that investing should be thrilling, not boring.
+                    is an AI-driven meme project that aims to promote
+                    truth-seeking and help the community gain free tickets to
+                    Justin's comedy show.
                   </span>
                   <br />
                   <br />
+                  <span></span>
+                </div>
+              </div>
+            </div>
+            <hr className="line-hr" />
+            <div>
+              <div className="min-h-[198px] h-full flex items-center text-[12px] leading-4 p-6 border-[3px] rounded-[20px] text-white border-[#ECFF76] w-[278px]">
+                <div>
+                  <span>Through the</span>{" "}
+                  <span className="text-[#ACF10E]"> $PPSUN</span>{" "}
                   <span>
-                    That's why we've created a token that's designed for people
-                    who want to take risks, have fun, and maybe even get a
-                    little bit rekted along the way.
+                    token the community can enjoy moments of relaxation and
+                    entertainment after a stressful workday.
                   </span>
                 </div>
               </div>
@@ -44,28 +55,10 @@ const WelcomeToPepe = () => {
             <div>
               <div className="min-h-[198px] h-full flex items-center text-[12px] leading-4 p-6 border-[3px] rounded-[20px] text-white border-[#ECFF76] w-[278px]">
                 <div>
+                  <span className="text-[#ACF10E]">$PPSUN</span>{" "}
                   <span>
-                    So if you're tired of playing it safe and want to join the
-                    craziest ride in the crypto world,
-                  </span>
-                  <span className="text-[#ACF10E]">
-                    then Pepe is the token for you
-                  </span>{" "}
-                  <span>
-                    . With us, you can your portfolio and embrace the chaos of
-                    the market.
-                  </span>
-                </div>
-              </div>
-            </div>
-            <hr className="line-hr" />
-            <div>
-              <div className="min-h-[198px] h-full flex items-center text-[12px] leading-4 p-6 border-[3px] rounded-[20px] text-white border-[#ECFF76] w-[278px]">
-                <div>
-                  <span className="text-[#ACF10E]">Join the Pepe</span>{" "}
-                  <span>
-                    army today and REKTify you portfolio! Remember - it's not
-                    about the destination, it's about the rekted journey.
+                    is a token created by the community, for the community, and
+                    for Justin's comedy show.
                   </span>
                 </div>
               </div>

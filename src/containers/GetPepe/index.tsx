@@ -19,9 +19,8 @@ const GetPepe = () => {
               You get <span className="text-[#ACF10E]">Pepe now</span>
             </h2>
             <span className="text-[#73A095] font-[400] text-[13px] leading-[26px] w-[75%] text-center mb-6">
-              A total of 84,000,000,000,000 PEPE tokens are now available to be
-              claimed by those who have claimed the ARB airdrop. PEPE tokens
-              that have not been claimed within
+             A total of 200,000,000,000,000 $PPSUN tokens are now available to be claimed by "audience" who are randomly selected through our airdrop campaign.
+             $PPSUN tokens that have not been claimed within
             </span>
             <div className="flex bg-[#26423A] rounded-xl px-5 py-2">
               <Image alt="" src={iconFire} />
@@ -32,7 +31,7 @@ const GetPepe = () => {
             <div className="w-full">
               <div className="flex justify-between items-center text-[#73A095] font-[400] leading-5 text-[14px] mt-6">
                 <span>Claimed</span>
-                <span>84,000,000,000,000</span>
+               <span>200,000,000,000,000</span>
               </div>
               <div className="w-full range-get-pepe">
                 <input
@@ -47,12 +46,12 @@ const GetPepe = () => {
             <div className="flex gap-8 justify-evenly w-[90%] mt-14">
               <button className="bg-[#73A095] rounded-xl py-[10px] px-4 text-white text-[16px] leading-5 glow-on-hover">
                 <span className="flex justify-center items-center text-center">
-                  You didn't connect the wallet
+                  Wallet not connect
                 </span>
               </button>
               <button className="bg-[#59A895] rounded-xl py-[10px] px-4 text-white text-[16px] leading-5 border-[3px] border-[#ACF10E] glow-on-hover">
                 <span className="flex justify-center items-center text-center">
-                  You didn't connect the wallet
+                  Invite Friends
                 </span>
               </button>
             </div>
